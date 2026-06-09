@@ -1,6 +1,12 @@
 from __future__ import annotations
 
+# Create a Vector class
 class Vector:
+    """
+    Vector class
+    """
+
+    # Define all functions for all operations done on the vector, and raise errors if needed.
     def __init__(self, x, y) -> None:
         self.x = x
         self.y = y

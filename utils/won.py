@@ -1,0 +1,2 @@
+class Won(Exception):
+    pass
