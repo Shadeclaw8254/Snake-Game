@@ -1,0 +1,5 @@
+True: Vector(0, 1) != Vector(-1, 0)
+False: Vector(0, -1) != Vector(0, -1)
+False: Vector(0, -1) != Vector(0, -1)
+True: Vector(1, 0) != Vector(0, -1)
+True: Vector(0, -1) != Vector(-1, 0)
