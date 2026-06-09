@@ -15,15 +15,15 @@ python -m venv venv
 call venv\Scripts\activate.bat
 set "is_environment_activated=true"
 pip install windows-curses
-
+goto RunGame
 
 :RunGame
+echo Running Game...
 if "%is_environment_activated%"=="false" (
-	echo Running game...
 	call venv\Scripts\activate.bat
 	set "is_environment_activated=true"
 )
 
 python main.py
 
-exit
+deactivate

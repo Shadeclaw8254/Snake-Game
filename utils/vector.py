@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 class Vector:
     def __init__(self, x, y) -> None:
         self.x = x

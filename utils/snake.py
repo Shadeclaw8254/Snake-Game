@@ -12,8 +12,12 @@ import time
 class Snake(GameObject):
     def __init__(self):
         self.direction = directions[curses.KEY_RIGHT]
-        self.char = "#"
-        self.body: list[SnakePart] = [SnakePart(Vector(0, 0)), SnakePart(Vector(1, 0)), SnakePart(Vector(2, 0))]
+        self.body: list[SnakePart] = []
+
+        for i in range(0, 3):
+            part = SnakePart(Vector(i, 0))
+            part.char = "—"
+            self.body.append(part)
 
     def move(self):
         if self.direction in [Vector(1, 0), Vector(-1, 0)]:
@@ -39,10 +43,10 @@ class Snake(GameObject):
 
     def grow(self):
         if self.direction in [Vector(1, 0), Vector(-1, 0)]:
-            character = "-"
+            character = "—"
 
         elif self.direction in [Vector(0, 1), Vector(0, -1)]:
-            character = "ǀ"
+            character = "|"
 
         
         part = SnakePart(
